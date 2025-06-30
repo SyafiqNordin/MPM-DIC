@@ -40,3 +40,6 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+# DevExtreme License key
+src/devextreme-license.ts
