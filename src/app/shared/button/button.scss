@@ -1,0 +1,101 @@
+// Main Contained Button
+::ng-deep .main-contained-button .dx-button-content {
+  background-color: #763f98 !important;
+  color: #ffffff !important;
+  font-family: "Museo Sans";
+  font-size: 600;
+}
+
+::ng-deep .main-contained-button .dx-button-content:hover {
+  background-color: #b83333 !important;
+}
+
+::ng-deep .dx-button.main-contained-button.dx-button-mode-contained {
+  border: none !important;
+  border-radius: 100px !important;
+  box-shadow: none !important;
+}
+
+::ng-deep .main-contained-button .dx-icon {
+  color: #ffffff !important;
+}
+
+// Main Outlined Button
+::ng-deep .main-outlined-button .dx-button-content {
+  background-color: transparent !important;
+  color: #763f98 !important;
+}
+
+::ng-deep .main-outlined-button .dx-button-content:hover {
+  background-color: #763f98 !important;
+  color: #ffffff !important;
+}
+
+::ng-deep .dx-button.main-outlined-button.dx-button-mode-outlined {
+  border: 1px solid #763f98 !important;
+  border-radius: 100px !important;
+  box-shadow: none !important;
+}
+
+::ng-deep .main-outlined-button .dx-icon {
+  color: #763f98 !important;
+}
+
+// Main Text Button
+::ng-deep .main-text-button .dx-button-content {
+  background-color: transparent !important;
+  color: #763f98 !important;
+}
+
+::ng-deep .main-text-button .dx-icon {
+  color: #763f98 !important;
+}
+
+::ng-deep .main-text-button:hover .dx-icon,
+::ng-deep .main-text-button:hover .dx-button-text {
+  // hover color
+  color: #e8c8f5 !important;
+}
+
+::ng-deep .main-text-button.dx-state-active .dx-button-content,
+::ng-deep .main-text-button.dx-state-focused .dx-button-content {
+  // no gray flash when clicking
+  background-color: white !important;
+}
+
+::ng-deep .main-text-button,
+::ng-deep .main-text-button.dx-state-focused,
+::ng-deep .main-text-button.dx-state-active {
+  // no border flash when clicking
+  border: none !important;
+  box-shadow: none !important;
+}
+
+// Cancel Text Button
+::ng-deep .cancel-text-button .dx-button-content {
+  background-color: transparent !important;
+  color: #ec0000 !important;
+}
+
+::ng-deep .cancel-text-button .dx-icon {
+  color: #ec0000 !important;
+}
+
+::ng-deep .cancel-text-button:hover .dx-button-text {
+  // hover color
+  color: #f05c5c !important;
+}
+
+::ng-deep .cancel-text-button.dx-state-active .dx-button-content,
+::ng-deep .cancel-text-button.dx-state-focused .dx-button-content {
+  // no gray flash when clicking
+  background-color: white !important;
+}
+
+::ng-deep .cancel-text-button,
+::ng-deep .cancel-text-button.dx-state-focused,
+::ng-deep .cancel-text-button.dx-state-active {
+  // no border flash when clicking
+  border: none !important;
+  box-shadow: none !important;
+}

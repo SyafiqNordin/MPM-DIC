@@ -1,0 +1,83 @@
+::ng-deep {
+  .dx-menu-item {
+    .dx-menu-item-content {
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .dx-icon {
+        width: 24px;
+        height: 24px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 16px;
+        aspect-ratio: 1/1;
+      }
+
+      .petronas-icon {
+        background-image: url("/icons/Logo.svg");
+        margin-bottom: 16px;
+        margin-top: 5px;
+        margin-left: 0px;
+        width: 32px;
+        height: 32px;
+        margin-right: 0px;
+        position: relative;
+
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: -16px; /* Position it right below the icon */
+          left: 50%;
+          transform: translateX(-50%);
+          width: 40px; /* Match the width of the icon */
+          height: 1px;
+          background-color: #547fc3; /* Light gray border color */
+        }
+      }
+
+      .system-icon {
+        background-image: url("/images/Apps.svg");
+        margin-top: 6px;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-bottom: 6px;
+      }
+
+      .product-icon {
+        background-image: url("/images/PAC PSC Module.svg");
+        margin-top: 6px;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-bottom: 6px;
+      }
+
+      .user-icon {
+        background-image: url("/images/PAC.svg");
+        margin-top: 6px;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-bottom: 6px;
+      }
+
+      .file-icon {
+        background-image: url("/images/PSC.svg");
+        margin-top: 6px;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-bottom: 6px;
+      }
+    }
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.05);
+    }
+  }
+}

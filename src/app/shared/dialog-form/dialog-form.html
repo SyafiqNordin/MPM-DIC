@@ -1,0 +1,13 @@
+<dx-popup
+  [width]="660"
+  [height]="540"
+  [title]="title()"
+  [(visible)]="popupVisible"
+  (onHiding)="onVisibleChange(false)"
+>
+  <div *dxTemplate="let data of 'content'">
+    <!-- <h1>Popup Content</h1>
+    <p>This is a popup dialog</p> -->
+    <app-button />
+  </div>
+</dx-popup>

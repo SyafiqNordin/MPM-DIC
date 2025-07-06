@@ -1,0 +1,18 @@
+<div class="header-container">
+  <h1>{{ title() }}</h1>
+  <dx-menu
+    [items]="button"
+    orientation="horizontal"
+    [hideSubmenuOnMouseLeave]="false"
+    [showFirstSubmenuMode]="{ name: 'onHover', delay: { show: 0, hide: 300 } }"
+    [showSubmenuMode]="{ name: 'onHover', delay: { show: 0, hide: 300 } }"
+    class="sidebar-menu"
+    [itemTemplate]="'menuItemTemplate'"
+  >
+    <div *dxTemplate="let item of 'menuItemTemplate'">
+      <div class="menu-item">
+        <div class="dx-icon" [ngClass]="item.icon"></div>
+      </div>
+    </div>
+  </dx-menu>
+</div>
