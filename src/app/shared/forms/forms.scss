@@ -87,4 +87,30 @@
   .dx-field-value:not(.dx-switch):not(.dx-checkbox):not(.dx-button) {
     width: 100%;
   }
+
+  //accordion
+  ::ng-deep #accordion {
+    height: 700px;
+  }
+
+  ::ng-deep #accordion .header {
+    font-size: 20px;
+  }
+
+  ::ng-deep #accordion .header,
+  ::ng-deep #accordion p {
+    margin: 0;
+  }
+
+  ::ng-deep #accordion-container {
+    margin-right: 400px;
+  }
+
+  ::ng-deep .dx-theme-material #accordion .dx-accordion-item-title {
+    display: flex;
+  }
+
+  ::ng-deep .dx-theme-material #accordion .header {
+    align-self: center;
+  }
 }

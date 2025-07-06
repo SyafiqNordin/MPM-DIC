@@ -1,39 +1,44 @@
-import { Component, input, signal, computed } from '@angular/core';
+// forms.ts
+import { Component, input } from '@angular/core';
 import { DxFormModule } from 'devextreme-angular';
 import { DxDateBoxModule } from 'devextreme-angular';
 import { DxSelectBoxModule } from 'devextreme-angular';
 import { DxTextAreaModule } from 'devextreme-angular';
 import { DxTextBoxModule } from 'devextreme-angular';
+import { CommonModule } from '@angular/common';
+import { signal } from '@angular/core';
+import { DxAccordionModule } from 'devextreme-angular';
+
+export interface FormField {
+  type: 'text' | 'select' | 'textarea' | 'date' | 'accordion';
+  label: string;
+  name: string;
+  value?: any;
+  placeholder?: string;
+  options?: Array<{ value: any; text: string }>;
+  required?: boolean;
+  maxLength?: number;
+}
 
 @Component({
   selector: 'app-forms',
   standalone: true,
   imports: [
+    CommonModule,
     DxFormModule,
     DxDateBoxModule,
     DxSelectBoxModule,
     DxTextAreaModule,
     DxTextBoxModule,
+    DxAccordionModule,
   ],
   templateUrl: './forms.html',
   styleUrl: './forms.scss',
 })
 export class Forms {
-  maintitle = input<string>('General Information');
-  title = input<string>('Project Name');
-  title2 = input<string>('Project Short Name');
-  title3 = input<string>('Project Type');
-  title4 = input<string>('Project Description/Objective');
-  title2placeholder = input<string>(
-    'A short name/code for this project, e.g., PM1-DEEP'
-  );
-  title3placeholder = input<string>('Select');
-  title4placeholder = input<string>(
-    'Enter a short summary of the project purpose and expected outcome'
-  );
-  maxLength = input<number>(1000);
+  maintitle = input<string>('Form Title');
+  fields = input<FormField[]>([]);
   currentText = signal<string>('');
-  remainingChars = computed(() => this.maxLength() - this.currentText().length);
 
   onTextChange(e: any) {
     this.currentText.set(e.event?.target?.value || '');

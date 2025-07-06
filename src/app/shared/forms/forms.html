@@ -1,21 +1,19 @@
+<!-- forms.html -->
 <div class="form">
   <div class="dx-fieldset">
     <div class="dx-fieldset-header">{{ maintitle() }}</div>
+
+    @for (field of fields(); track field.name) {
     <div class="dx-field">
-      <div class="dx-field-label">{{ title() }}</div>
-      <dx-text-box class="dx-field-value"> </dx-text-box>
-    </div>
-    <div class="dx-field">
-      <div class="dx-field-label">{{ title2() }}</div>
-      <dx-text-box class="dx-field-value" [placeholder]="title2placeholder()">
-      </dx-text-box>
-    </div>
-    <div class="dx-field">
-      <div class="dx-field-label">{{ title3() }}</div>
+      <div class="dx-field-label">{{ field.label }}</div>
+
+      @switch (field.type) { @case ('select') {
       <dx-select-box
         class="dx-field-value"
-        [placeholder]="title3placeholder()"
-        selectionMode="single"
+        [placeholder]="field.placeholder || 'Select'"
+        [items]="field.options || []"
+        displayExpr="text"
+        valueExpr="value"
       >
         <div *dxTemplate="let data of 'dropDownButton'">
           <svg
@@ -32,22 +30,32 @@
           </svg>
         </div>
       </dx-select-box>
-    </div>
-    <div class="dx-field">
-      <div class="dx-field-label">{{ title4() }}</div>
+      } @case ('textarea') {
       <dx-text-area
         class="dx-field-value"
-        [placeholder]="title4placeholder()"
-        [maxLength]="maxLength()"
+        [placeholder]="field.placeholder || ''"
+        [maxLength]="field.maxLength || 1000"
         (onValueChanged)="onTextChange($event)"
-      >
-      </dx-text-area>
+      ></dx-text-area>
+      @if (field.maxLength) {
       <div
         class="char-counter"
-        [class.char-limit-reached]="remainingChars() <= 0"
+        [class.char-limit-reached]="(field.maxLength - (currentText()?.length || 0)) <= 0"
       >
-        {{ currentText().length }}/{{ maxLength() }}
+        {{ currentText()?.length || 0 }}/{{ field.maxLength }}
       </div>
+      } } @case ('text') {
+      <dx-text-box
+        class="dx-field-value"
+        [placeholder]="field.placeholder || ''"
+      >
+      </dx-text-box>
+
+      } @case ('accordion') {
+      <dx-accordion #accordian [collapsible]="true" [multiple]="false">
+      </dx-accordion>
+      } }
     </div>
+    }
   </div>
 </div>

@@ -9,7 +9,20 @@
 
   <!-- Main Content -->
   <main class="main-content">
-    <app-forms maintitle="General Information" [fields]="fields"></app-forms>
+    <app-forms maintitle="PSC/PAC Information" [fields]="fields"> </app-forms>
+    <app-accordion
+      [items]="accordionItems"
+      [collapsible]="true"
+      [multiple]="true"
+    >
+      <div data-section="0">
+        <app-forms maintitle="PAC Details" [fields]="pacDetailsFields">
+        </app-forms>
+      </div>
+      <div data-section="1">
+        <!-- Content for second accordion item -->
+      </div>
+    </app-accordion>
 
     <div class="button-container">
       <app-button
@@ -19,12 +32,12 @@
         (buttonClick)="onCancelButtonClick()"
       ></app-button>
       <div class="action-buttons">
-        <!-- <app-button
+        <app-button
           class="add-button"
           text="Previous"
           stylingMode="contained"
           (buttonClick)="onAddButtonClick()"
-        ></app-button> -->
+        ></app-button>
         <app-button
           class="add-button"
           text="Next"

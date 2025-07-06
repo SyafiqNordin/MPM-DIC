@@ -1,0 +1,111 @@
+:host {
+  display: block;
+  width: 100%;
+
+  .accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    background-color: #fff !important;
+    border: none !important;
+
+    &-item {
+      border: 1px solid #e0e0e0;
+      border-radius: 4px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      background-color: #fff !important;
+
+      &.expanded {
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      &.disabled {
+        opacity: 0.6;
+        pointer-events: none;
+      }
+    }
+
+    &-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 16px;
+      background-color: #f5f5f5;
+      cursor: pointer;
+      user-select: none;
+      transition: all 0.2s ease;
+      color: #000;
+
+      &:hover {
+        background-color: #eeeeee;
+
+        .expand-text {
+          color: #333;
+        }
+      }
+
+      .expanded & {
+        background-color: #e0e0e0;
+      }
+    }
+
+    &-title {
+      /* Body/500 (Regular)/S */
+      font-family: "Museo Sans";
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20px; /* 142.857% */
+      letter-spacing: 0.28px;
+    }
+
+    &-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .expand-text {
+      color: #000;
+
+      /* Body/500 (Regular)/XS */
+      font-family: "Museo Sans";
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 18px; /* 150% */
+      letter-spacing: 0.48px;
+      transition: color 0.2s ease;
+    }
+
+    &-icon {
+      font-size: 1.2em;
+      font-weight: bold;
+      transition: transform 0.2s ease;
+
+      .expanded & {
+        transform: rotate(180deg);
+      }
+    }
+
+    &-content {
+      padding: 16px;
+      background: white;
+      border-top: 1px solid #e0e0e0;
+      animation: fadeIn 0.3s ease;
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

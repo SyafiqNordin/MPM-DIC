@@ -1,12 +1,12 @@
 <dx-stepper
-  [selectedIndex]="selectedIndex"
+  [selectedIndex]="selectedIndex()"
   [linear]="true"
   orientation="vertical"
-  (onItemClick)="onItemClick($event)"
+  (onItemClick)="handleItemClick($event)"
 >
   <dxi-stepper-item
-    *ngFor="let step of steps; let i = index"
+    *ngFor="let step of steps(); let i = index"
     [label]="step.label"
-    [icon]="i < selectedIndex ? 'check' : ''"
+    [icon]="i < selectedIndex() ? 'check' : ''"
   ></dxi-stepper-item>
 </dx-stepper>
