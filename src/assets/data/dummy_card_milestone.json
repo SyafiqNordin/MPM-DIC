@@ -1,0 +1,32 @@
+[
+    {
+        "mrTitle": 1,
+        "fidImpact": 7,
+        "deviated": 3,
+        "onTrack": 12
+    },
+    {
+        "mrTitle": 2,
+        "fidImpact": 5,
+        "deviated": 2,
+        "onTrack": 8
+    },
+    {
+        "mrTitle": 3,
+        "fidImpact": 9,
+        "deviated": 4,
+        "onTrack": 15
+    },
+    {
+        "mrTitle": 4,
+        "fidImpact": 2,
+        "deviated": 1,
+        "onTrack": 6
+    },
+    {
+        "mrTitle": 5,
+        "fidImpact": 10,
+        "deviated": 5,
+        "onTrack": 20
+    }
+]

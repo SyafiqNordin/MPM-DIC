@@ -1,5 +1,14 @@
 <div class="header-container">
-  <h1>{{ title() }}</h1>
+  <div class="header-title">
+    <app-button
+      customButton="main-text-button"
+      icon="arrowleft"
+      text="Back"
+      [hoverStateEnabled]="false"
+      stylingMode="text"
+    ></app-button>
+    <h1>{{ title() }}</h1>
+  </div>
   <dx-menu
     [items]="button"
     orientation="horizontal"

@@ -1,0 +1,94 @@
+// Main grid container and table styles
+::ng-deep .gridContainer .dx-datagrid {
+  font-family: "Museo Sans";
+  font-size: 12px;
+  padding: 0; /* remove padding if not needed */
+  //   border-bottom-left-radius: 12px;
+  //   border-bottom-right-radius: 12px;
+  border: none !important;
+  overflow: hidden; /* clip inner rows */
+  border-radius: 12px;
+}
+
+/* Ensure the rows view also respects the radius */
+::ng-deep .gridContainer .dx-datagrid-rowsview {
+  border-bottom: none !important;
+}
+::ng-deep .gridContainer {
+  .dx-datagrid-borders > .dx-datagrid-rowsview.dx-last-row-border {
+    tbody:last-child {
+      > .dx-data-row:nth-last-child(2),
+      > .dx-data-row:nth-last-child(2) > td {
+        background: #ffffff;
+      }
+    }
+  }
+}
+
+/* Prevent the header from getting rounded at all */
+::ng-deep .gridContainer .dx-datagrid-headers {
+  //   border-radius: 0 !important;
+  color: var(--Greyscale-PETRONAS-Dark-Grey, #666);
+
+  /* Body/700 (Bold)/XS */
+  font-family: "Museo Sans";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px; /* 150% */
+  letter-spacing: 0.48px;
+}
+
+/* Customizing the search input */
+::ng-deep .gridContainer .dx-texteditor {
+  border: 2px solid #dde4ee !important;
+  box-shadow: none !important;
+  background-color: transparent;
+  border-radius: 100px;
+}
+
+::ng-deep .gridContainer .dx-texteditor-container {
+  border: none !important;
+  background-color: #ffffff;
+  border-radius: 100px;
+}
+
+::ng-deep .gridContainer .dx-texteditor-input {
+  border: none !important;
+  background-color: transparent;
+  color: black;
+  outline: none !important;
+}
+::ng-deep .gridContainer .dx-searchbox .dx-icon-search,
+::ng-deep .gridContainer .dx-searchbox .dx-icon-search:before {
+  color: #3d3935 !important;
+}
+
+::ng-deep .gridContainer .dx-datagrid-borders > .dx-datagrid-headers {
+  border-top: 1px solid #ddd;
+  background-color: #dde4ee;
+  background: var(--Functional-Icy-Sky-Blue, #dde4ee);
+}
+/* Action button styles */
+::ng-deep .gridContainer .dx-button.action-menu-button {
+  min-width: 30px;
+  padding: 0;
+
+  .dx-button-content {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .dx-icon-more {
+    color: #3d3935;
+    opacity: 0.7;
+    font-size: 16px;
+    transition: opacity 0.2s;
+  }
+
+  &:hover .dx-icon-more {
+    opacity: 1;
+  }
+}

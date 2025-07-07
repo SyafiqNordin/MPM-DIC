@@ -7,11 +7,12 @@
   background: var(--Core-PETRONAS-Solid-White, #fff);
 
   /* Shadow/Cards/S */
-  box-shadow: 0px 8px 20px 0px rgba(0, 48, 86, 0.08);
+  box-shadow: 0px 8px 20px 0px rgba(15, 16, 16, 0.08);
 
   .dx-fieldset:first-child > h4:first-child {
     margin-top: 0;
   }
+
   .dx-field {
     display: flex;
     width: 640px;
@@ -89,28 +90,28 @@
   }
 
   //accordion
-  ::ng-deep #accordion {
-    height: 700px;
-  }
+  //   ::ng-deep #accordion {
+  //     height: 700px;
+  //   }
 
-  ::ng-deep #accordion .header {
-    font-size: 20px;
-  }
+  //   ::ng-deep #accordion .header {
+  //     font-size: 20px;
+  //   }
 
-  ::ng-deep #accordion .header,
-  ::ng-deep #accordion p {
-    margin: 0;
-  }
+  //   ::ng-deep #accordion .header,
+  //   ::ng-deep #accordion p {
+  //     margin: 0;
+  //   }
 
-  ::ng-deep #accordion-container {
-    margin-right: 400px;
-  }
+  //   ::ng-deep #accordion-container {
+  //     margin-right: 400px;
+  //   }
 
-  ::ng-deep .dx-theme-material #accordion .dx-accordion-item-title {
-    display: flex;
-  }
+  //   ::ng-deep .dx-theme-material #accordion .dx-accordion-item-title {
+  //     display: flex;
+  //   }
 
-  ::ng-deep .dx-theme-material #accordion .header {
-    align-self: center;
-  }
+  //   ::ng-deep .dx-theme-material #accordion .header {
+  //     align-self: center;
+  //   }
 }

@@ -4,10 +4,8 @@ import { Forms, FormField } from '../../../../shared/forms/forms';
 import { DialogForm } from '../../../../shared/dialog-form/dialog-form';
 import { CommonModule } from '@angular/common';
 import { Stepper } from '../../../../shared/stepper/stepper';
-import {
-  AccordionComponent,
-  AccordionItem,
-} from '../../../../shared/accordian/accordian';
+import { AppAccordionComponent } from '../../../../shared/accordian/accordian';
+import { DxAccordionModule } from 'devextreme-angular/ui/accordion';
 
 type DialogType = 'add' | 'cancel' | null;
 
@@ -20,15 +18,13 @@ type DialogType = 'add' | 'cancel' | null;
     Forms,
     DialogForm,
     Stepper,
-    AccordionComponent,
+    AppAccordionComponent,
+    DxAccordionModule,
   ],
   templateUrl: './pac-info.html',
   styleUrl: './pac-info.scss',
 })
 export class PacInfo {
-  accordionItems: AccordionItem[] = [
-    { title: 'Pac Details', isExpanded: true },
-  ];
   currentStepIndex = signal(1);
   fields: FormField[] = [
     {
@@ -108,6 +104,18 @@ export class PacInfo {
       label: 'PSC End Date',
       name: 'pscEndDate',
       placeholder: 'Enter PSC End Date',
+    },
+  ];
+  projectTeamFields: FormField[] = [
+    {
+      type: 'label',
+      labelname: 'Pac Project Team',
+      name: 'projectTeam',
+      placeholder: 'Enter Name',
+    },
+    {
+      type: 'table',
+      name: 'projectTeam',
     },
   ];
   isDialogVisible = false;

@@ -8,16 +8,19 @@ import { DxTextBoxModule } from 'devextreme-angular';
 import { CommonModule } from '@angular/common';
 import { signal } from '@angular/core';
 import { DxAccordionModule } from 'devextreme-angular';
+import { DataGridComponent } from '../data-grid/data-grid';
 
 export interface FormField {
-  type: 'text' | 'select' | 'textarea' | 'date' | 'accordion';
-  label: string;
+  type: 'text' | 'select' | 'textarea' | 'date' | 'label' | 'table';
+  label?: string;
   name: string;
   value?: any;
   placeholder?: string;
   options?: Array<{ value: any; text: string }>;
   required?: boolean;
   maxLength?: number;
+  //in case you want to show label only use this
+  labelname?: string;
 }
 
 @Component({
@@ -31,12 +34,15 @@ export interface FormField {
     DxTextAreaModule,
     DxTextBoxModule,
     DxAccordionModule,
+    DataGridComponent,
   ],
   templateUrl: './forms.html',
   styleUrl: './forms.scss',
 })
 export class Forms {
-  maintitle = input<string>('Form Title');
+  customField = input<string>('dx-field');
+  customFieldset = input<string>('');
+  maintitle = input<string>('');
   fields = input<FormField[]>([]);
   currentText = signal<string>('');
 

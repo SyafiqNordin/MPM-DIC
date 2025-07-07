@@ -9,20 +9,27 @@
 
   <!-- Main Content -->
   <main class="main-content">
-    <app-forms maintitle="PSC/PAC Information" [fields]="fields"> </app-forms>
+    <app-forms
+      customFieldset="dx-fieldset"
+      maintitle="PSC/PAC Information"
+      [fields]="fields"
+    />
+    <!-- use ng template to put content inside accordion #pending confirmation -->
+    <ng-template #pacDetails>
+      <app-forms
+        customFieldset="dx-fieldset"
+        maintitle="PAC Details"
+        [fields]="pacDetailsFields"
+      />
+    </ng-template>
     <app-accordion
-      [items]="accordionItems"
+      [items]="[
+    { title: 'PAC Details', contentTemplate: pacDetails }
+  ]"
       [collapsible]="true"
       [multiple]="true"
-    >
-      <div data-section="0">
-        <app-forms maintitle="PAC Details" [fields]="pacDetailsFields">
-        </app-forms>
-      </div>
-      <div data-section="1">
-        <!-- Content for second accordion item -->
-      </div>
-    </app-accordion>
+    ></app-accordion>
+    <app-forms customFieldset="dx-fieldset" [fields]="projectTeamFields" />
 
     <div class="button-container">
       <app-button

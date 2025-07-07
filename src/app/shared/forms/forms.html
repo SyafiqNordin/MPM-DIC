@@ -1,13 +1,14 @@
-<!-- forms.html -->
 <div class="form">
-  <div class="dx-fieldset">
+  <div [class]="customFieldset()">
+    <!-- if maintitle is not empty show fieldset header -->
+    @if (maintitle()) {
     <div class="dx-fieldset-header">{{ maintitle() }}</div>
-
-    @for (field of fields(); track field.name) {
-    <div class="dx-field">
+    } @for (field of fields(); track field.name) {
+    <div [class]="field.type === 'table' ? 'no-field-style' : customField()">
+      <!-- if field label is not empty show field label -->
+      @if (field.label) {
       <div class="dx-field-label">{{ field.label }}</div>
-
-      @switch (field.type) { @case ('select') {
+      } @switch (field.type) { @case ('select') {
       <dx-select-box
         class="dx-field-value"
         [placeholder]="field.placeholder || 'Select'"
@@ -51,9 +52,10 @@
       >
       </dx-text-box>
 
-      } @case ('accordion') {
-      <dx-accordion #accordian [collapsible]="true" [multiple]="false">
-      </dx-accordion>
+      } @case ('table') {
+      <app-data-grid customGrid="gridContainer"></app-data-grid>
+      } @case ('label') {
+      <p class="dx-field-label">{{ field.labelname }}</p>
       } }
     </div>
     }

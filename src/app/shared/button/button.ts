@@ -14,7 +14,7 @@ export class Button {
   width = input<string | number>();
   height = input<string | number>();
   icon = input<string>('');
-  hoverStateEnabled = input<boolean>(true);
+  hoverStateEnabled = input<boolean>(false);
   disabled = input<boolean>(false);
   customButton = input<string>('');
   buttonClick = output<void>();

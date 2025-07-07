@@ -45,17 +45,26 @@
 ::ng-deep .main-text-button .dx-button-content {
   background-color: transparent !important;
   color: #763f98 !important;
+  text-align: center;
+
+  /* Body/700 (Bold)/M */
+  font-family: "Museo Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.16px;
 }
 
 ::ng-deep .main-text-button .dx-icon {
   color: #763f98 !important;
 }
 
-::ng-deep .main-text-button:hover .dx-icon,
-::ng-deep .main-text-button:hover .dx-button-text {
-  // hover color
-  color: #e8c8f5 !important;
-}
+// ::ng-deep .main-text-button:hover .dx-icon,
+// ::ng-deep .main-text-button:hover .dx-button-text {
+//   // hover color
+//   color: #e8c8f5 !important;
+// }
 
 ::ng-deep .main-text-button.dx-state-active .dx-button-content,
 ::ng-deep .main-text-button.dx-state-focused .dx-button-content {
