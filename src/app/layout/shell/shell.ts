@@ -11,7 +11,7 @@ import { RouterOutlet } from '@angular/router';
     <div class="app-layout">
       <app-sidebar class="sidebar"></app-sidebar>
       <div class="main">
-        <app-header title="MPM Digital Intelligence Centre"></app-header>
+        <app-header></app-header>
         <div class="content">
           <router-outlet />
         </div>

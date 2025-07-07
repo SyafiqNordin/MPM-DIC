@@ -1,8 +1,9 @@
-import { Component, input } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { DxFormModule } from 'devextreme-angular';
 import { DxMenuModule } from 'devextreme-angular';
 import { CommonModule } from '@angular/common';
 import { Button } from '../../shared/button/button';
+import { TitleService } from '../../core/services/title.service';
 
 @Component({
   selector: 'app-header',
@@ -11,7 +12,8 @@ import { Button } from '../../shared/button/button';
   styleUrl: './header.scss',
 })
 export class Header {
-  title = input<string>('');
+  private titleService = inject(TitleService);
+  title = this.titleService.title;
   button = [
     { icon: 'ai-icon' },
     { icon: 'help-icon' },

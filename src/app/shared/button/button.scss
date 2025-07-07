@@ -66,19 +66,19 @@
 //   color: #e8c8f5 !important;
 // }
 
-::ng-deep .main-text-button.dx-state-active .dx-button-content,
-::ng-deep .main-text-button.dx-state-focused .dx-button-content {
-  // no gray flash when clicking
-  background-color: white !important;
-}
+// ::ng-deep .main-text-button.dx-state-active .dx-button-content,
+// ::ng-deep .main-text-button.dx-state-focused .dx-button-content {
+//   // no gray flash when clicking
+//   background-color: white !important;
+// }
 
-::ng-deep .main-text-button,
-::ng-deep .main-text-button.dx-state-focused,
-::ng-deep .main-text-button.dx-state-active {
-  // no border flash when clicking
-  border: none !important;
-  box-shadow: none !important;
-}
+// ::ng-deep .main-text-button,
+// ::ng-deep .main-text-button.dx-state-focused,
+// ::ng-deep .main-text-button.dx-state-active {
+//   // no border flash when clicking
+//   border: none !important;
+//   box-shadow: none !important;
+// }
 
 // Cancel Text Button
 ::ng-deep .cancel-text-button .dx-button-content {

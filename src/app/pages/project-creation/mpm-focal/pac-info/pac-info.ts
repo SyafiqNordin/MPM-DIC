@@ -1,4 +1,5 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, inject } from '@angular/core';
+import { TitleService } from '../../../../core/services/title.service';
 import { Button } from '../../../../shared/button/button';
 import { Forms, FormField } from '../../../../shared/forms/forms';
 import { DialogForm } from '../../../../shared/dialog-form/dialog-form';
@@ -25,6 +26,13 @@ type DialogType = 'add' | 'cancel' | null;
   styleUrl: './pac-info.scss',
 })
 export class PacInfo {
+  private titleService = inject(TitleService);
+
+  constructor() {
+    this.titleService.setTitle(
+      'Create New Project (Deepwater Exploration Block PM-1)'
+    );
+  }
   currentStepIndex = signal(1);
   fields: FormField[] = [
     {

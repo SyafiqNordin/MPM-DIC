@@ -16,11 +16,7 @@
     />
     <!-- use ng template to put content inside accordion #pending confirmation -->
     <ng-template #pacDetails>
-      <app-forms
-        customFieldset="dx-fieldset"
-        maintitle="PAC Details"
-        [fields]="pacDetailsFields"
-      />
+      <app-forms customFieldset="dx-fieldset" [fields]="pacDetailsFields" />
     </ng-template>
     <app-accordion
       [items]="[

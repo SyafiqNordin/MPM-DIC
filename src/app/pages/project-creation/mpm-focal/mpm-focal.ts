@@ -1,4 +1,5 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
+import { TitleService } from '../../../core/services/title.service';
 import { Button } from '../../../shared/button/button';
 import { Forms, FormField } from '../../../shared/forms/forms';
 import { DialogForm } from '../../../shared/dialog-form/dialog-form';
@@ -15,6 +16,13 @@ type DialogType = 'add' | 'cancel' | null;
   styleUrl: './mpm-focal.scss',
 })
 export class MPMFocal {
+  private titleService = inject(TitleService);
+
+  constructor() {
+    this.titleService.setTitle(
+      'Create New Project (Deepwater Exploration Block PM-1)'
+    );
+  }
   currentStepIndex = signal(0);
   fields: FormField[] = [
     {
@@ -65,7 +73,7 @@ export class MPMFocal {
   onCancelButtonClick(): void {
     console.log('Cancel button clicked');
     this.currentDialog = 'cancel';
-    this.dialogTitle = 'Cancel';
+    this.dialogTitle = 'Cancel Project Creation?';
     this.isDialogVisible = true;
   }
 
