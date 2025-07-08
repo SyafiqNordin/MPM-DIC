@@ -7,7 +7,7 @@ import { MPMFocal } from './modules/mpm-focal/mpm-focal';
 //later remove the import button etc use it import on pages that we need it dont declare here
 
 @Component({
-  selector: 'app-root',
+  selector: '#app-pace',
   standalone: true,
   imports: [RouterOutlet, DxButtonModule, DxFormModule, MPMFocal],
   templateUrl: './app.component.html',
