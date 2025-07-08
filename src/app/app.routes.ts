@@ -38,4 +38,11 @@ export const routes: Routes = [
       },
     ],
   },
+  {
+    path: 'asset-hierarchy',
+    loadComponent: () =>
+      import(
+        './modules/system-configuration/asset-hierarchy/asset-hierarchy.component'
+      ).then((m) => m.AssetHierarchyComponent),
+  }
 ];

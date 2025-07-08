@@ -1,0 +1,36 @@
+<div class="d-flex flex-column w-100 h-100 gap-2">
+  <div class="d-flex justify-content-between align-items-center">
+    <p>System Configuration</p>
+    <div class="d-flex gap-2 align-items-center">
+      <i class="bi bi-clock"></i>
+      <p>Data as at 26/6/25</p>
+    </div>
+  </div>
+  <app-card class="w-100 h-100">
+    <div class="d-flex flex-column h-100 w-100">
+      <div
+        class="app-asset-hierarchy-card-header d-flex justify-content-between align-items-center py-3 border-bottom"
+      >
+        <div class="d-flex gap-2 align-items-center">
+          <app-button
+            icon="bi bi-chevron-left fw-semibold"
+            [hoverStateEnabled]="false"
+            stylingMode="text"
+          ></app-button>
+          <p class="fw-semibold">Asset Hierarchy</p>
+        </div>
+        <p class="fw-semibold">Asset/Project</p>
+      </div>
+      <div class="d-flex w-100 h-100">
+        <!-- Hierarchy list container -->
+        <div class="col-3 border-end">
+
+        </div>
+        <!-- Asset Item Content -->
+        <div class="col-9">
+
+        </div>
+      </div>
+    </div>
+  </app-card>
+</div>
