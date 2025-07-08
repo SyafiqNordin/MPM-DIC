@@ -1,0 +1,70 @@
+<div class="mpm-focal-container">
+  <!-- Sidebar Content -->
+  <aside class="sidebar">
+    <app-stepper
+      [selectedIndex]="currentStepIndex()"
+      (onItemClick)="onStepChange($event.itemIndex)"
+    ></app-stepper>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <app-forms
+      customFieldset="dx-fieldset"
+      maintitle="PSC/PAC Information"
+      [fields]="fields"
+    />
+    <!-- use ng template to put content inside accordion #pending confirmation -->
+    <ng-template #pacDetails>
+      <app-forms customFieldset="dx-fieldset" [fields]="pacDetailsFields" />
+    </ng-template>
+    <app-accordion
+      [items]="[
+    { title: 'PAC Details', contentTemplate: pacDetails }
+  ]"
+      [collapsible]="true"
+      [multiple]="true"
+    ></app-accordion>
+    <app-forms customFieldset="dx-fieldset" [fields]="projectTeamFields" />
+
+    <div class="button-container">
+      <app-button
+        class="cancel-button"
+        text="Cancel"
+        stylingMode="text"
+        (buttonClick)="onCancelButtonClick()"
+      ></app-button>
+      <div class="action-buttons">
+        <app-button
+          class="add-button"
+          text="Previous"
+          stylingMode="contained"
+          (buttonClick)="onAddButtonClick()"
+        ></app-button>
+        <app-button
+          class="add-button"
+          text="Next"
+          stylingMode="contained"
+          [disabled]="true"
+          (buttonClick)="onAddButtonClick()"
+        ></app-button>
+      </div>
+    </div>
+
+    <app-dialog-form
+      [title]="dialogTitle"
+      [popupVisible]="isDialogVisible"
+      (popupVisibleChange)="onDialogVisibleChange($event)"
+    >
+      @if (isDialogType('add')) {
+      <div>
+        <p>Add new item form will go here</p>
+      </div>
+      } @if (isDialogType('cancel')) {
+      <div>
+        <p>Are you sure you want to cancel?</p>
+      </div>
+      }
+    </app-dialog-form>
+  </main>
+</div>

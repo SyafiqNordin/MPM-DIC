@@ -1,0 +1,15 @@
+<dx-menu
+  [items]="products"
+  orientation="vertical"
+  [hideSubmenuOnMouseLeave]="false"
+  [showFirstSubmenuMode]="{ name: 'onHover', delay: { show: 0, hide: 300 } }"
+  [showSubmenuMode]="{ name: 'onHover', delay: { show: 0, hide: 300 } }"
+  class="sidebar-menu"
+  [itemTemplate]="'menuItemTemplate'"
+>
+  <div *dxTemplate="let item of 'menuItemTemplate'">
+    <div class="menu-item">
+      <div class="dx-icon" [ngClass]="item.icon"></div>
+    </div>
+  </div>
+</dx-menu>

@@ -1,0 +1,40 @@
+::ng-deep .dx-popup-title.dx-toolbar {
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  align-self: stretch;
+  border-bottom: none !important;
+}
+
+::ng-deep .dx-popup-wrapper > .dx-overlay-content {
+  display: flex;
+  width: 642px;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 12px;
+  background: var(--Core-PETRONAS-Solid-White, #fff);
+
+  /* Shadow/Cards/S */
+  box-shadow: 0px 8px 20px 0px rgba(0, 48, 86, 0.08);
+}
+::ng-deep .dx-toolbar-label > div {
+  color: var(--Greyscale-PETRONAS-Charcoal-Grey, #333);
+
+  /* Body/700 (Bold)/S */
+  font-family: "Museo Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px; /* 142.857% */
+  letter-spacing: 0.28px;
+}
+
+.justify-content-end {
+  padding-top: 8px;
+  padding-right: 8px;
+  padding-bottom: 8px;
+  display: flex;
+  justify-content: flex-end;
+}

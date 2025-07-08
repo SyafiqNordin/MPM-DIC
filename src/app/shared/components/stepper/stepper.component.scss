@@ -1,0 +1,54 @@
+//stepper css below
+::ng-deep .dx-stepper-vertical {
+  height: 400px;
+  width: 100%;
+}
+
+::ng-deep .stepper-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Ensure the step content container allows wrapping */
+::ng-deep .dx-step-content {
+  width: 100% !important;
+  min-width: 0 !important;
+}
+
+/* Target the specific stepper label elements */
+::ng-deep .dx-stepper-vertical .dx-step-label,
+::ng-deep .dx-stepper-vertical .dx-step-optional-mark {
+  white-space: normal !important;
+  word-break: break-word !important;
+  max-width: 100% !important;
+  width: 100% !important;
+  display: block !important;
+  text-overflow: clip !important;
+  overflow: hidden !important;
+  text-align: left !important;
+}
+
+/* Ensure the step title container doesn't restrict width */
+// ::ng-deep .dx-step-title {
+//   width: 100% !important;
+//   max-width: 100% !important;
+//   display: block !important;
+// }
+
+::ng-deep .dx-step.dx-step-selected .dx-step-indicator {
+  background-color: #763f98 !important;
+  box-shadow: 0 0 0 2px #763f98 !important;
+  color: #ffffff !important;
+  border-color: #ffffff !important;
+}
+::ng-deep .dx-step-indicator {
+  background-color: #ffffff !important;
+  box-shadow: 0 0 0 2px transparent !important;
+}
+::ng-deep .dx-step.dx-step-completed .dx-step-indicator {
+  background-color: #00b1a9 !important;
+  box-shadow: 0 0 0 2px transparent !important;
+}

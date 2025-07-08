@@ -1,0 +1,36 @@
+<!-- <div class="accordion">
+  @for (item of items(); track $index; let i = $index) {
+  <div
+    class="accordion-item"
+    [class.expanded]="isItemExpanded(i)"
+    [class.disabled]="item.disabled"
+  >
+    <div class="accordion-header" (click)="!item.disabled && toggleItem(i)">
+      <span class="accordion-title">{{ item.title }}</span>
+      <div class="accordion-actions">
+        <span class="expand-text">
+          {{ isItemExpanded(i) ? 'Collapse' : 'Expand' }}
+        </span>
+        <span class="accordion-icon">{{ isItemExpanded(i) ? '−' : '+' }}</span>
+      </div>
+    </div>
+    @if (isItemExpanded(i)) {
+    <div class="accordion-content">
+      <ng-content [attr.data-section]="i"></ng-content>
+    </div>
+    }
+  </div>
+  }
+</div> -->
+<dx-accordion [collapsible]="collapsible()" [multiple]="multiple()">
+  <dxi-item
+    class="accordion-header"
+    *ngFor="let item of items()"
+    [title]="item.title"
+  >
+    <!-- <h1>Collapsed</h1> -->
+    <ng-template dxTemplate="content">
+      <ng-container *ngTemplateOutlet="item.contentTemplate"></ng-container>
+    </ng-template>
+  </dxi-item>
+</dx-accordion>

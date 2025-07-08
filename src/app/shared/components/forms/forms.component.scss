@@ -1,0 +1,117 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+  border-radius: 12px;
+  background: var(--Core-PETRONAS-Solid-White, #fff);
+
+  /* Shadow/Cards/S */
+  box-shadow: 0px 8px 20px 0px rgba(15, 16, 16, 0.08);
+
+  .dx-fieldset:first-child > h4:first-child {
+    margin-top: 0;
+  }
+
+  .dx-field {
+    display: flex;
+    width: 640px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .dx-fieldset-header {
+    color: var(--Greyscale-PETRONAS-Charcoal-Grey, #333);
+
+    /* Body/700 (Bold)/S */
+    font-family: "Museo Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px; /* 142.857% */
+    letter-spacing: 0.28px;
+  }
+
+  .dx-field > .dx-field-label {
+    // width: 50%;
+    color: var(--Greyscale-PETRONAS-Dark-Grey, #666);
+
+    /* Body/700 (Bold)/XS */
+    font-family: "Museo Sans";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 18px; /* 150% */
+    letter-spacing: 0.48px;
+  }
+
+  .char-counter {
+    color: var(--Greyscale-PETRONAS-Dark-Grey, #666);
+    font-size: 10px;
+    text-align: right;
+    letter-spacing: 0.6px;
+    margin-top: 4px;
+    margin-right: 16px;
+    font-family: "Museo Sans";
+    width: 100%;
+    display: block;
+
+    // &.char-limit-reached {
+    //   color: #d9534f;
+    //   font-weight: 600;
+    // }
+  }
+
+  .dx-field > .dx-field-value {
+    // width: 80%;
+    // display: flex;
+    padding: 12px 16px;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
+    border-radius: 8px;
+    border: 1px solid var(--Functional-Icy-Sky-Blue, #dde4ee);
+    background: var(--Core-PETRONAS-Solid-White, #fff);
+  }
+  ::ng-deep .dx-texteditor-input-container .dx-placeholder {
+    flex: 1 0 0;
+    color: var(--Greyscale-PETRONAS-Light-Grey, #ccc);
+    font-family: "Museo Sans";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0.48px;
+  }
+  //the width of the field value
+  .dx-field-value-static,
+  .dx-field-value:not(.dx-switch):not(.dx-checkbox):not(.dx-button) {
+    width: 100%;
+  }
+
+  //accordion
+  //   ::ng-deep #accordion {
+  //     height: 700px;
+  //   }
+
+  //   ::ng-deep #accordion .header {
+  //     font-size: 20px;
+  //   }
+
+  //   ::ng-deep #accordion .header,
+  //   ::ng-deep #accordion p {
+  //     margin: 0;
+  //   }
+
+  //   ::ng-deep #accordion-container {
+  //     margin-right: 400px;
+  //   }
+
+  //   ::ng-deep .dx-theme-material #accordion .dx-accordion-item-title {
+  //     display: flex;
+  //   }
+
+  //   ::ng-deep .dx-theme-material #accordion .header {
+  //     align-self: center;
+  //   }
+}

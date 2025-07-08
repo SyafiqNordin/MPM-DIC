@@ -1,0 +1,20 @@
+<dx-popup
+  class="popup"
+  [width]="650"
+  [height]="174"
+  [title]="title()"
+  [(visible)]="popupVisible"
+  (onHiding)="onVisibleChange(false)"
+  [dragEnabled]="false"
+>
+  <div *dxTemplate="let data of 'content'">
+    <p>
+      You haven’t completed creating this project. If you cancel now, all
+      entered information will be lost.
+    </p>
+    <div class="justify-content-end">
+      <app-button customButton="main-contained-button" text="Discard" />
+      <app-button customButton="main-contained-button" text="Continue" />
+    </div>
+  </div>
+</dx-popup>

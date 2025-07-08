@@ -1,0 +1,98 @@
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 20px 16px 8px 8px;
+}
+.header-title {
+  display: flex;
+  align-items: center;
+}
+
+h1 {
+  font-family: "Museo Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.16px;
+  background: var(
+    --Gradient-Horizon,
+    linear-gradient(90deg, #00a19c 0%, #763f98 100%)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 8px;
+}
+
+::ng-deep {
+  .dx-menu-item {
+    .dx-menu-item-content {
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .dx-icon {
+        width: 32px;
+        height: 32px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 8px;
+        aspect-ratio: 1/1;
+      }
+
+      .ai-icon {
+        background-image: url("/icons/AI_icon.svg");
+        margin-top: 6px;
+        margin-left: 4px;
+        margin-right: 0px;
+        margin-bottom: 6px;
+      }
+
+      .help-icon {
+        background-image: url("/icons/info_icon.svg");
+        margin-top: 6px;
+        margin-left: 4px;
+        margin-right: 0px;
+        margin-bottom: 6px;
+      }
+
+      .bell-icon {
+        background-image: url("/icons/bell_icon.svg");
+        margin-top: 6px;
+        margin-left: 4px;
+        margin-right: 0px;
+        margin-bottom: 6px;
+      }
+
+      .menu-icon {
+        background-image: url("/icons/menu_dots_icon.svg");
+        margin-top: 6px;
+        margin-left: 4px;
+        margin-right: 0px;
+        margin-bottom: 6px;
+      }
+
+      .profile-icon {
+        background-image: url("/icons/avatar_dummy_icon.svg");
+        margin-top: 6px;
+        margin-left: 8px;
+        margin-right: 0px;
+        margin-bottom: 6px;
+      }
+    }
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.05);
+    }
+  }
+}
