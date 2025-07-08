@@ -19,21 +19,21 @@ export const routes: Routes = [
         path: 'general-information',
         loadComponent: () =>
           import(
-            './modules/mpm-focal/project-creation/general-information/general-information.component'
+            './modules/sanctioning-and-execution/project-creation/general-information/general-information.component'
           ).then((m) => m.GeneralInformation),
       },
       {
         path: 'pac-information',
         loadComponent: () =>
           import(
-            './modules/mpm-focal/project-creation/pac-information/pac-information.component'
+            './modules/sanctioning-and-execution/project-creation/pac-information/pac-information.component'
           ).then((m) => m.PacInfo),
       },
       {
         path: 'linked-project',
         loadComponent: () =>
           import(
-            './modules/mpm-focal/project-creation/linked-project/linked-project.component'
+            './modules/sanctioning-and-execution/project-creation/linked-project/linked-project.component'
           ).then((m) => m.LinkedProject),
       },
     ],
