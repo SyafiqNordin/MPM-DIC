@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Header } from './header.component';
+import { DialogForm } from './dialog-form.component';
 
-describe('Header', () => {
-  let component: Header;
-  let fixture: ComponentFixture<Header>;
+describe('DialogForm', () => {
+  let component: DialogForm;
+  let fixture: ComponentFixture<DialogForm>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Header],
+      imports: [DialogForm],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(Header);
+    fixture = TestBed.createComponent(DialogForm);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

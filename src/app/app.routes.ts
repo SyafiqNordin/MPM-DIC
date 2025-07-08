@@ -1,23 +1,21 @@
 import { Routes } from '@angular/router';
-import { ShellComponent } from './layout/shell/shell';
+import { MainLayoutComponent } from './layout/main-layout/main-layout.component';
 
 // app.routes.ts
 export const routes: Routes = [
   {
     path: '',
-    component: ShellComponent,
+    component: MainLayoutComponent,
     children: [
       {
         path: 'mpm-focal',
         loadComponent: () =>
-          import('./pages/project-creation/mpm-focal/mpm-focal').then(
-            (m) => m.MPMFocal
-          ),
+          import('./modules/mpm-focal/mpm-focal').then((m) => m.MPMFocal),
       },
       {
         path: 'mpm-focal/pac-info',
         loadComponent: () =>
-          import('./pages/project-creation/mpm-focal/pac-info/pac-info').then(
+          import('./modules/mpm-focal/project-creation/pac-info/pac-info').then(
             (m) => m.PacInfo
           ),
       },
@@ -25,7 +23,7 @@ export const routes: Routes = [
         path: 'mpm-focal/linked-project',
         loadComponent: () =>
           import(
-            './pages/project-creation/mpm-focal/linked-project/linked-project'
+            './modules/mpm-focal/project-creation/linked-project/linked-project'
           ).then((m) => m.LinkedProject),
       },
       // other routes here

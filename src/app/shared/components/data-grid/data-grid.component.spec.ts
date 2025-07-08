@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Header } from './header.component';
+import { DataGrid } from './data-grid.component';
 
-describe('Header', () => {
-  let component: Header;
-  let fixture: ComponentFixture<Header>;
+describe('DataGrid', () => {
+  let component: DataGrid;
+  let fixture: ComponentFixture<DataGrid>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Header],
+      imports: [DataGrid],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(Header);
+    fixture = TestBed.createComponent(DataGrid);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Header } from './header.component';
+import { Accordian } from './accordian.component';
 
-describe('Header', () => {
-  let component: Header;
-  let fixture: ComponentFixture<Header>;
+describe('Accordian', () => {
+  let component: Accordian;
+  let fixture: ComponentFixture<Accordian>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Header],
+      imports: [Accordian],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(Header);
+    fixture = TestBed.createComponent(Accordian);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
