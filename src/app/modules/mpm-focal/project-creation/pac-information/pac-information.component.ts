@@ -25,8 +25,8 @@ type DialogType = 'add' | 'cancel' | null;
     AppAccordionComponent,
     DxAccordionModule,
   ],
-  templateUrl: './pac-info.html',
-  styleUrl: './pac-info.scss',
+  templateUrl: './pac-information.component.html',
+  styleUrl: './pac-information.component.scss',
 })
 export class PacInfo {
   private titleService = inject(TitleService);

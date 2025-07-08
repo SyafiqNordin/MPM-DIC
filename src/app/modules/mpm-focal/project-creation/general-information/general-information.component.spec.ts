@@ -1,18 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GeneralInfo } from './general-info.component';
+import { GeneralInformation } from './general-information.component';
 
 describe('GeneralInfo', () => {
-  let component: GeneralInfo;
-  let fixture: ComponentFixture<GeneralInfo>;
+  let component: GeneralInformation;
+  let fixture: ComponentFixture<GeneralInformation>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [GeneralInfo]
-    })
-    .compileComponents();
+      imports: [GeneralInformation],
+    }).compileComponents();
 
-    fixture = TestBed.createComponent(GeneralInfo);
+    fixture = TestBed.createComponent(GeneralInformation);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

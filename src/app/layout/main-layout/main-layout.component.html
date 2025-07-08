@@ -1,9 +1,9 @@
-<div class="app-layout">
-  <app-sidebar class="sidebar"></app-sidebar>
-  <div class="main">
+<main class="d-flex p-3 app-main-layout">
+  <app-sidebar class="p-3"></app-sidebar>
+  <div class="d-flex flex-column w-100 ps-3">
     <app-header></app-header>
-    <div class="content">
+    <div class="d-flex w-100 h-100 overflow-auto">
       <router-outlet />
     </div>
   </div>
-</div>
+</main>

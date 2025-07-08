@@ -1,32 +1,10 @@
-.header-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  padding: 20px 16px 8px 8px;
-}
-.header-title {
-  display: flex;
-  align-items: center;
-}
-
-h1 {
-  font-family: "Museo Sans";
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 24px; /* 150% */
-  letter-spacing: 0.16px;
-  background: var(
-    --Gradient-Horizon,
-    linear-gradient(90deg, #00a19c 0%, #763f98 100%)
-  );
-  background-clip: text;
+.app-header-title {
+  background: linear-gradient(90deg, #00a19c 0%, #763f98 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  padding: 8px;
 }
 
+// Todo: Should no longer need this later when dx-menu is changed to buttons
 ::ng-deep {
   .dx-menu-item {
     .dx-menu-item-content {

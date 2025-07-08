@@ -1,11 +1,11 @@
-<div class="mpm-focal-container">
-  <!-- Sidebar Content -->
-  <aside class="sidebar">
+<div class="d-flex w-100 h-100">
+  <!-- Stepper container -->
+  <div class="col-2">
     <app-stepper [selectedIndex]="currentStepIndex()"></app-stepper>
-  </aside>
+  </div>
 
-  <!-- Main Content -->
-  <main class="main-content">
+  <!-- Form container -->
+  <div class="d-flex flex-column p-2 w-100 justify-content-between">
     <app-forms
       customFieldset="dx-fieldset"
       maintitle="General Information"
@@ -19,12 +19,6 @@
         stylingMode="text"
       ></app-button>
       <div class="action-buttons">
-        <!-- <app-button
-          class="add-button"
-          text="Previous"
-          stylingMode="contained"
-          (buttonClick)="onAddButtonClick()"
-        ></app-button> -->
         <app-button
           class="add-button"
           text="Next"
@@ -49,5 +43,5 @@
       </div>
       }
     </app-dialog-form> -->
-  </main>
+  </div>
 </div>

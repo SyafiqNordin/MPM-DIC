@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: flex-start;
   align-self: stretch;
+  padding: 1.25rem;
   border-radius: 12px;
   background: var(--Core-PETRONAS-Solid-White, #fff);
 
@@ -11,6 +12,11 @@
 
   .dx-fieldset:first-child > h4:first-child {
     margin-top: 0;
+  }
+
+  .dx-fieldset {
+    margin: 0;
+    width: 100%
   }
 
   .dx-field {

@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LinkedProject } from './linked-project';
+import { PACFocal } from './pac-focal.component';
 
-describe('LinkedProject', () => {
-  let component: LinkedProject;
-  let fixture: ComponentFixture<LinkedProject>;
+describe('PACFocal', () => {
+  let component: PACFocal;
+  let fixture: ComponentFixture<PACFocal>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [LinkedProject]
+      imports: [PACFocal]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(LinkedProject);
+    fixture = TestBed.createComponent(PACFocal);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

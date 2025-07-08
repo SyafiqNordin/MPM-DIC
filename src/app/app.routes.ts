@@ -1,32 +1,41 @@
 import { Routes } from '@angular/router';
-import { MainLayoutComponent } from './layout/main-layout/main-layout.component';
 
 // app.routes.ts
 export const routes: Routes = [
   {
     path: '',
-    component: MainLayoutComponent,
+    redirectTo: '/project-creation',
+    pathMatch: 'full',
+  },
+  {
+    path: 'project-creation',
     children: [
       {
-        path: 'mpm-focal',
-        loadComponent: () =>
-          import('./modules/mpm-focal/mpm-focal').then((m) => m.MPMFocal),
+        path: '',
+        redirectTo: 'general-information',
+        pathMatch: 'full',
       },
       {
-        path: 'mpm-focal/pac-info',
-        loadComponent: () =>
-          import('./modules/mpm-focal/project-creation/pac-info/pac-info').then(
-            (m) => m.PacInfo
-          ),
-      },
-      {
-        path: 'mpm-focal/linked-project',
+        path: 'general-information',
         loadComponent: () =>
           import(
-            './modules/mpm-focal/project-creation/linked-project/linked-project'
+            './modules/mpm-focal/project-creation/general-information/general-information.component'
+          ).then((m) => m.GeneralInformation),
+      },
+      {
+        path: 'pac-information',
+        loadComponent: () =>
+          import(
+            './modules/mpm-focal/project-creation/pac-information/pac-information.component'
+          ).then((m) => m.PacInfo),
+      },
+      {
+        path: 'linked-project',
+        loadComponent: () =>
+          import(
+            './modules/mpm-focal/project-creation/linked-project/linked-project.component'
           ).then((m) => m.LinkedProject),
       },
-      // other routes here
     ],
   },
 ];

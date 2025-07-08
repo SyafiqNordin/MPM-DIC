@@ -1,18 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PACFocal } from './pac-focal';
+import { PacInfo } from './pac-information.component';
 
-describe('PACFocal', () => {
-  let component: PACFocal;
-  let fixture: ComponentFixture<PACFocal>;
+describe('PacInfo', () => {
+  let component: PacInfo;
+  let fixture: ComponentFixture<PacInfo>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [PACFocal]
-    })
-    .compileComponents();
+      imports: [PacInfo],
+    }).compileComponents();
 
-    fixture = TestBed.createComponent(PACFocal);
+    fixture = TestBed.createComponent(PacInfo);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

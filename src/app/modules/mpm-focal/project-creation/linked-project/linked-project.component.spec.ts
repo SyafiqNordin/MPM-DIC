@@ -1,18 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MPMFocal } from './mpm-focal';
+import { LinkedProject } from './linked-project.component';
 
-describe('MPMFocal', () => {
-  let component: MPMFocal;
-  let fixture: ComponentFixture<MPMFocal>;
+describe('LinkedProject', () => {
+  let component: LinkedProject;
+  let fixture: ComponentFixture<LinkedProject>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [MPMFocal]
-    })
-    .compileComponents();
+      imports: [LinkedProject],
+    }).compileComponents();
 
-    fixture = TestBed.createComponent(MPMFocal);
+    fixture = TestBed.createComponent(LinkedProject);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

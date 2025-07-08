@@ -1,14 +1,14 @@
 import { Component, inject, signal } from '@angular/core';
-import { TitleService } from '../../services/title.service';
-import { Button } from '../../shared/components/button/button.component';
+import { TitleService } from '../../../../services/title.service';
+import { Button } from '../../../../shared/components/button/button.component';
 import {
   Forms,
   FormField,
-} from '../../shared/components/forms/forms.component';
-import { DialogForm } from '../../shared/components/dialog-form/dialog-form.component';
+} from '../../../../shared/components/forms/forms.component';
+import { DialogForm } from '../../../../shared/components/dialog-form/dialog-form.component';
 import { CommonModule } from '@angular/common';
-import { Stepper } from '../../shared/components/stepper/stepper.component';
-import dummyform from '../../../assets/data/form-fields.json';
+import { Stepper } from '../../../../shared/components/stepper/stepper.component';
+import dummyform from '../../../../../assets/data/form-fields.json';
 
 // type DialogType = 'add' | 'cancel' | null;
 
@@ -17,13 +17,13 @@ interface FormFieldsJson {
   fields: FormField[];
 }
 @Component({
-  selector: 'app-mpm-focal',
+  selector: 'app-general-information',
   standalone: true,
   imports: [CommonModule, Button, Forms, DialogForm, Stepper],
-  templateUrl: './mpm-focal.html',
-  styleUrl: './mpm-focal.scss',
+  templateUrl: './general-information.component.html',
+  styleUrl: './general-information.component.scss',
 })
-export class MPMFocal {
+export class GeneralInformation {
   private titleService = inject(TitleService);
 
   constructor() {
